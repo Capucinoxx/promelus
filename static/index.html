@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Online Promela editor">
+
+    <title>Promelus</title>
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="editor" contenteditable="true" spellcheck="false">
+      <div>proctype example() {</div>
+      <div>  int i = 0;</div>
+      <div>  if :: i < 10 -> i + 1; :: else -> skip; fi;</div>
+      <div>}</div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
