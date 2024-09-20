@@ -69,47 +69,6 @@ const caret = {
 const setup_editor = (el, highlight = highlight_promela, tab = '  ') => {
   highlight(el);
 
-  // const handle_paste = (e) => {
-  //   e.preventDefault();
-  //   const text = (e.clipboardData || window.clipboardData).getData('text').trim();
-  //   if (!text) return;
-  
-  //   const selection = window.getSelection();
-  //   const range = selection.getRangeAt(0);
-  
-  //   // Si on veut insérer à la position actuelle, on va d'abord supprimer le contenu sélectionné
-  //   range.deleteContents();
-  
-  //   // Sépare le texte par lignes
-  //   const lines = text.split('\n').filter(line => line.trim() !== '');
-  
-  //   // Crée un fragment de document pour une insertion efficace
-  //   const fragment = document.createDocumentFragment();
-  
-  //   lines.forEach(line => {
-  //     const div = document.createElement('div');
-  //     div.textContent = line;
-  //     fragment.appendChild(div);
-  //   });
-  
-  //   range.insertNode(fragment);
-
-  //   if (fragment.lastChild) {
-  //     range.setStartAfter(fragment.lastChild);
-  //   } else {
-  //     range.setStart(range.startContainer, range.startOffset);
-  //   }
-
-  //   range.collapse(true);
-  //   selection.removeAllRanges();
-  //   selection.addRange(range);
-  
-  //   highlight(el);
-  // };
-  
-  
-  
-
   const handle_keydown = (e) => {
     if (e.key === 'Tab') {
       const pos = caret.get(el) + tab.length;
